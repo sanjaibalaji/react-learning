@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Ensure spacing between sections */
+}
+
+.form-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #000; /* Ensure headers are black */
+}
+
+.form-header span {
+    color: #000; /* Black color for text after numbers */
+}
+
+.custom-input {
+    border-radius: 15px; /* Adjust the border radius for rounded corners */
+    border:  #ced4da;
+    background-color: #dae0e5;
+    transition: background-color 0.3s, border-color 0.3s;
+    height: 45px; /* Adjust height to match design */
+}
+
+.custom-input:focus {
+    border-color: #80bdff;
+    background-color: #ffffff;
+    outline: 0;
+    box-shadow: none;
+}
+
+.order-summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-continue {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    height: 45px; /* Adjust height to match design */
+    padding: 0 50px; /* Adjust padding for better alignment */
+}
+
+.input-group-append .btn {
+    border-radius: 0 5px 5px 0; /* Make sure the button fits with the input */
+}
+.show-password-btn {
+    border:none;
+    background-color:#dae0e5 ;
+    padding-right: 10px;
+    color: #8e8e8e;
+    border-radius: 0px 15px 15px 0px;
+}
