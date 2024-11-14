@@ -24,7 +24,7 @@ const UserList = () => {
     try {
       const response = await api.post('/userlist', form);
       setUsers([...users, response.data]);
-      setForm({ name: '', email: '' }); // Reset form
+      setForm({ name: '', email: '' }); 
     } catch (error) {
       console.error('Error adding user:', error);
     }
