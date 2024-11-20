@@ -5,65 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body style="background-color: #f8f9fa;">
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-8">
-                <div class="form-container">
+                <div class="bg-white p-4 rounded shadow-sm mb-4">
                     <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
-                        <div class="form-header d-flex align-items-center">
-                            <span class="step-number">1</span> <span>Account details</span>
+                        <div class="d-flex align-items-center">
+                            <span class="h5 mr-2">1</span>
+                            <span class="h5">Account details</span>
                         </div>
                         <div class="mt-2 mt-md-0 text-right">
-                            <p style="display: inline;">Already have an account? </p>
-                            <a href="#" class="text-primary">Sign in here</a>
+                            <p class="mb-0">Already have an account? <a href="#" class="text-primary">Sign in here</a></p>
                         </div>
                     </div>
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="email">Email address *</label>
-                                <input type="email" class="form-control custom-input" id="email" placeholder="Email address" required>
+                                <input type="email" class="form-control" id="email" placeholder="Email address" required style="border: none; background-color: #f5f5f5;">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="password">Password *</label>
-                                <div class="input-group">
-                                    <input type="password" class="form-control custom-input" id="password" placeholder="Password" required>
-                                    <div class="input-group-append">
-                                        <button class="show-password-btn" type="button"><u>Show</u></button>
-                                    </div>
+                                <div class="input-group" style="position: relative;">
+                                    <input type="password" class="form-control" id="password" placeholder="Password" required style="border: none; background-color: #f5f5f5; padding-right: 60px;">
+                                    <span class="position-absolute" id="show-password-toggle" style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #6c757d;">Show</span>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="firstName">First name *</label>
-                                <input type="text" class="form-control custom-input" id="firstName" placeholder="First name" required>
+                                <input type="text" class="form-control" id="firstName" placeholder="First name" required style="border: none; background-color: #f5f5f5;">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="lastName">Last name *</label>
-                                <input type="text" class="form-control custom-input" id="lastName" placeholder="Last name" required>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last name" required style="border: none; background-color: #f5f5f5;">
                             </div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
-                            <p class="mb-0">By creating an account, you agree to the <a href="#">Terms And Conditions</a> set <br>out by this site, including our <a href="#">Cookie Use</a>.</p>
-                            <button type="submit" class="btn btn-continue">Continue</button>
+                            <p class="mb-0">By creating an account, you agree to the <a href="#">Terms And Conditions</a> set out by this site, including our <a href="#">Cookie Use</a>.</p>
+                            <button type="submit" class="btn text-white" style="background-color: #ff6600; border: none;">Continue</button>
                         </div>
                     </form>
                 </div>
-                <div class="form-container form-section">
-                    <div class="form-header">2 <span>Billing details</span></div>
-                   
+                <div class="bg-white p-4 rounded shadow-sm mb-4">
+                    <div class="h5 mb-3">2 Billing details</div>
+                    <!-- Billing details form goes here -->
                 </div>
-                <div class="form-container form-section">
-                    <div class="form-header">3 <span>Payment</span></div>
-                   
+                <div class="bg-white p-4 rounded shadow-sm mb-4">
+                    <div class="h5 mb-3">3 Payment</div>
+                    <!-- Payment form goes here -->
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="order-summary">
+                <div class="bg-white p-4 rounded shadow-sm">
                     <h5>Order summary</h5>
                     <p>Plan: Free Trial</p>
                     <p>Price: ₹0.00</p>
@@ -77,6 +74,18 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script>
+        document.getElementById('show-password-toggle').addEventListener('click', function() {
+            var passwordInput = document.getElementById('password');
+            var showPasswordToggle = document.getElementById('show-password-toggle');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showPasswordToggle.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                showPasswordToggle.textContent = 'Show';
+            }
+        });
+    </script>
 </body>
 </html>
